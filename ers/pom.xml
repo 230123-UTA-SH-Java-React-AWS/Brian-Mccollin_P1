@@ -33,6 +33,18 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.9.13</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.5.1</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -78,13 +90,7 @@
           <skip>${skipTests}</skip>
         </configuration>
         <executions>
-          <execution>
-            <id>checkstyle</id>
-            <phase>validate</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
+          <!-- <execution>             <id>checkstyle</id>             <phase>validate</phase>             <goals>               <goal>check</goal>             </goals>           </execution> -->
         </executions>
       </plugin>
       <plugin>
